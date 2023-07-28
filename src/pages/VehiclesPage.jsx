@@ -5,6 +5,7 @@ import Innova from "../assets/Innova.jpg";
 import Traveller from "../assets/traveller.jpg";
 import React from "react";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const VehiclesPage = () => {
   return (
@@ -64,20 +65,22 @@ const VehiclesPage = () => {
                     Charge per day : Rs 4500/-
                   </Typography>
                 </Box>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#3AB7D9",
-                    border: "2px solid #3AB7D9",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#3AB7D9",
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "#3AB7D9",
                       border: "2px solid #3AB7D9",
-                    },
-                  }}
-                >
-                  Book Now
-                </Button>
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#3AB7D9",
+                        border: "2px solid #3AB7D9",
+                      },
+                    }}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
               </Box>
             </Paper>
           </Grid>
@@ -105,7 +108,7 @@ const VehiclesPage = () => {
                   <img src={Entiga} width="100%" height="100%" alt="" />
                 </Box>
                 <Typography variant="h6" sx={{ fontWeight: "bold  " }}>
-                  Maruti Entiga
+                  Maruti Ertiga
                 </Typography>
 
                 <Box
@@ -124,20 +127,22 @@ const VehiclesPage = () => {
                     Charge per day : Rs 5500/-
                   </Typography>
                 </Box>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#3AB7D9",
-                    border: "2px solid #3AB7D9",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#3AB7D9",
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "#3AB7D9",
                       border: "2px solid #3AB7D9",
-                    },
-                  }}
-                >
-                  Book Now
-                </Button>
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#3AB7D9",
+                        border: "2px solid #3AB7D9",
+                      },
+                    }}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
               </Box>
             </Paper>
           </Grid>
@@ -184,20 +189,22 @@ const VehiclesPage = () => {
                     Charge per day : Rs 6500/-
                   </Typography>
                 </Box>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#3AB7D9",
-                    border: "2px solid #3AB7D9",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#3AB7D9",
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "#3AB7D9",
                       border: "2px solid #3AB7D9",
-                    },
-                  }}
-                >
-                  Book Now
-                </Button>
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#3AB7D9",
+                        border: "2px solid #3AB7D9",
+                      },
+                    }}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
               </Box>
             </Paper>
           </Grid>
@@ -261,20 +268,22 @@ const VehiclesPage = () => {
                   </Typography>
                 </Box>
 
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#3AB7D9",
-                    border: "2px solid #3AB7D9",
-                    "&:hover": {
-                      backgroundColor: "white",
-                      color: "#3AB7D9",
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <Button
+                    variant="contained"
+                    sx={{
+                      backgroundColor: "#3AB7D9",
                       border: "2px solid #3AB7D9",
-                    },
-                  }}
-                >
-                  Book Now
-                </Button>
+                      "&:hover": {
+                        backgroundColor: "white",
+                        color: "#3AB7D9",
+                        border: "2px solid #3AB7D9",
+                      },
+                    }}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
               </Box>
             </Paper>
           </Grid>
