@@ -1,5 +1,5 @@
 import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -24,6 +24,12 @@ import dest8 from "../assets/TD-Kaziranga.jpeg";
 import { Link as ScrollLink } from "react-scroll";
 
 const HomePage = () => {
+  const [value, setValue] = useState(true);
+
+  const handleChange = () => {
+    setValue(!value);
+  };
+
   return (
     <div>
       <Box sx={{ p: { xs: "10px 30px", sm: "10px 50px" } }}>
@@ -34,7 +40,7 @@ const HomePage = () => {
             justifyContent: "space-between",
             p: { xs: "0px", md: "0px 70px" },
             alignItems: "center",
-            marginTop: { xs: "100px", sm: "0px" },
+            marginTop: { xs: "200px", sm: "120px" },
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
@@ -75,7 +81,7 @@ const HomePage = () => {
               to="section"
               spy={true}
               smooth={true}
-              offset={-70}
+              offset={-140}
               duration={500}
             >
               <Button
@@ -118,218 +124,281 @@ const HomePage = () => {
             sx={{ height: "4px", width: "80px", backgroundColor: "#ED7626" }}
           ></Box>
 
-          <Grid container spacing={3} sx={{ marginTop: "50px" }}>
-            <Grid item md={4} sm={6} xs={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image={cardImage1}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Mountainous terrains
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Source Sans Pro" }}
-                  >
-                    "Conquer the rugged landscapes and misty peaks of Northeast
-                    India, where every step unveils a breathtaking vista of
-                    natural beauty."
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to="/contact">
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#3AB7D9",
-                        border: "2px solid #3AB7D9",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          color: "#3AB7D9",
-                          border: "2px solid #3AB7D9",
-                        },
-                      }}
+          {value ? (
+            <Grid container spacing={3} sx={{ marginTop: "50px" }}>
+              <Grid item md={4} sm={6} xs={12}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={cardImage1}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Mountainous terrains
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontFamily: "Source Sans Pro" }}
                     >
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={4} sm={6} xs={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image={cardImage2}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Waterfalls
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Source Sans Pro" }}
-                  >
-                    "Immerse yourself in the symphony of cascading waters as you
-                    discover the hidden gems of Northeast India's majestic
-                    waterfalls."
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to="/contact">
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#3AB7D9",
-                        border: "2px solid #3AB7D9",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          color: "#3AB7D9",
+                      "Conquer the rugged landscapes and misty peaks of
+                      Northeast India, where every step unveils a breathtaking
+                      vista of natural beauty."
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#3AB7D9",
                           border: "2px solid #3AB7D9",
-                        },
-                      }}
+                          "&:hover": {
+                            backgroundColor: "white",
+                            color: "#3AB7D9",
+                            border: "2px solid #3AB7D9",
+                          },
+                        }}
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item md={4} sm={6} xs={12}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={cardImage2}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Waterfalls
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontFamily: "Source Sans Pro" }}
                     >
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={4} sm={6} xs={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image={cardImage3}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Wildlife tours
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Source Sans Pro" }}
-                  >
-                    "Embark on a thrilling wildlife safari in Northeast India,
-                    where encounters with exotic animals and vibrant birdlife
-                    will leave you in awe."
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to="/contact">
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#3AB7D9",
-                        border: "2px solid #3AB7D9",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          color: "#3AB7D9",
+                      "Immerse yourself in the symphony of cascading waters as
+                      you discover the hidden gems of Northeast India's majestic
+                      waterfalls."
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#3AB7D9",
                           border: "2px solid #3AB7D9",
-                        },
-                      }}
+                          "&:hover": {
+                            backgroundColor: "white",
+                            color: "#3AB7D9",
+                            border: "2px solid #3AB7D9",
+                          },
+                        }}
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item md={4} sm={6} xs={12}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={cardImage3}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Wildlife tours
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontFamily: "Source Sans Pro" }}
                     >
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item md={4} sm={6} xs={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image={cardImage4}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Boating
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Source Sans Pro" }}
-                  >
-                    "Set sail on pristine waters, as you indulge in the serenity
-                    and tranquility of boating amidst the picturesque rivers and
-                    lakes of Northeast India."
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to="/contact">
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#3AB7D9",
-                        border: "2px solid #3AB7D9",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          color: "#3AB7D9",
+                      "Embark on a thrilling wildlife safari in Northeast India,
+                      where encounters with exotic animals and vibrant birdlife
+                      will leave you in awe."
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#3AB7D9",
                           border: "2px solid #3AB7D9",
-                        },
-                      }}
-                    >
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
+                          "&:hover": {
+                            backgroundColor: "white",
+                            color: "#3AB7D9",
+                            border: "2px solid #3AB7D9",
+                          },
+                        }}
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image={cardImage5}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Camping
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ fontFamily: "Source Sans Pro" }}
-                  >
-                    "Unwind amidst nature's embrace as you camp under the
-                    starlit skies of Northeast India, creating memories of
-                    peaceful solitude and adventure."
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Link to="/contact">
-                    <Button
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#3AB7D9",
-                        border: "2px solid #3AB7D9",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          color: "#3AB7D9",
+          ) : (
+            <Grid container spacing={3} sx={{ marginTop: "50px" }}>
+              <Grid item md={4} sm={6} xs={12}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={cardImage4}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Boating
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontFamily: "Source Sans Pro" }}
+                    >
+                      "Set sail on pristine waters, as you indulge in the
+                      serenity and tranquility of boating amidst the picturesque
+                      rivers and lakes of Northeast India."
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#3AB7D9",
                           border: "2px solid #3AB7D9",
-                        },
-                      }}
+                          "&:hover": {
+                            backgroundColor: "white",
+                            color: "#3AB7D9",
+                            border: "2px solid #3AB7D9",
+                          },
+                        }}
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
+              <Grid item md={4} sm={6} xs={12}>
+                <Card sx={{ maxWidth: 345 }}>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image={cardImage5}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      Camping
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ fontFamily: "Source Sans Pro" }}
                     >
-                      Book Now
-                    </Button>
-                  </Link>
-                </CardActions>
-              </Card>
+                      "Unwind amidst nature's embrace as you camp under the
+                      starlit skies of Northeast India, creating memories of
+                      peaceful solitude and adventure."
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Link to="/contact" style={{ textDecoration: "none" }}>
+                      <Button
+                        variant="contained"
+                        sx={{
+                          backgroundColor: "#3AB7D9",
+                          border: "2px solid #3AB7D9",
+                          "&:hover": {
+                            backgroundColor: "white",
+                            color: "#3AB7D9",
+                            border: "2px solid #3AB7D9",
+                          },
+                        }}
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </CardActions>
+                </Card>
+              </Grid>
             </Grid>
-          </Grid>
+          )}
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-end",
+            marginTop: "20px",
+          }}
+        >
+          {value ? (
+            <ScrollLink
+              to="section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#ED7626",
+                  border: "2px solid #ED7626",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "#ED7626",
+                    border: "2px solid #ED7626",
+                  },
+                }}
+                onClick={handleChange}
+              >
+                VIEW MORE
+              </Button>
+            </ScrollLink>
+          ) : (
+            <ScrollLink
+              to="section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#ED7626",
+                  border: "2px solid #ED7626",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    color: "#ED7626",
+                    border: "2px solid #ED7626",
+                  },
+                }}
+                onClick={handleChange}
+              >
+                VIEW LESS
+              </Button>
+            </ScrollLink>
+          )}
         </Box>
 
         <Box sx={{ marginTop: "100px" }} id="destinations">
