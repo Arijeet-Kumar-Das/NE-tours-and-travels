@@ -27,33 +27,12 @@ const Navbar = () => {
 
   const renderScrollLink = currentPath === homePagePath;
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-      setIsScrolled(scrollTop > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div>
       {/* Navigation Bar */}
       <Box
         sx={{
           padding: "20px 30px 0px 20px",
-          zIndex: 999,
-          background: isScrolled ? "rgba(255, 255, 255, 0.6)" : "transparent",
-          boxShadow: isScrolled ? "0px 0px 10px rgba(0, 0, 0, 0.1)" : "none",
-          backdropFilter: isScrolled ? "blur(10px)" : "none",
-          transition: "background-color 0.3s, box-shadow 0.3s",
-          position: "fixed",
-          width: "100vw",
         }}
       >
         <Box
@@ -99,7 +78,7 @@ const Navbar = () => {
                 to="destinations"
                 spy={true}
                 smooth={true}
-                offset={-160}
+                offset={-70}
                 duration={500}
               >
                 <Typography

@@ -40,7 +40,7 @@ const HomePage = () => {
             justifyContent: "space-between",
             p: { xs: "0px", md: "0px 70px" },
             alignItems: "center",
-            marginTop: { xs: "200px", sm: "120px" },
+            marginTop: { xs: "100px", sm: "0px" },
             flexDirection: { xs: "column", sm: "row" },
           }}
         >
@@ -81,7 +81,7 @@ const HomePage = () => {
               to="section"
               spy={true}
               smooth={true}
-              offset={-140}
+              offset={-70}
               duration={500}
             >
               <Button
