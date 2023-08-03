@@ -43,7 +43,7 @@ const ContactPage = () => {
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
               <LocalPhoneIcon />
               <Typography variant="h6" sx={{ fontFamily: "Source Sans Pro" }}>
-                7896550347
+                7896550347 / 8486500819
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
