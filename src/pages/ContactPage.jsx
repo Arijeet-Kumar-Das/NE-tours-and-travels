@@ -30,7 +30,6 @@ const ContactPage = () => {
           <Typography
             variant="h4"
             sx={{
-              fontFamily: "Source Sans Pro",
               fontWeight: "bold",
               fontSize: { xs: "30px", sm: "45px" },
               color: "#FF9800",

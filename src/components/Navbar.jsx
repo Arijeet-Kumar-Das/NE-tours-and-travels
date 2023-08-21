@@ -6,7 +6,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/newlogo.png";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
@@ -45,8 +45,8 @@ const Navbar = () => {
           <Link to="/" style={{ textDecoration: "none" }}>
             <Box
               sx={{
-                height: { xs: "100px", md: "120px" },
-                width: { xs: "130px", md: "150px" },
+                height: { xs: "70px", md: "100px" },
+                width: { xs: "70px", md: "100px" },
               }}
             >
               <img src={logo} alt="" width="100%" height="100%" />

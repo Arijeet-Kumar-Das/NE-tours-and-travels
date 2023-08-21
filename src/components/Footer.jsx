@@ -1,7 +1,7 @@
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/newlogo.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
             }}
           >
             <Link to="/" style={{ textDecoration: "none" }}>
-              <Box sx={{ height: "100px", width: "130px" }}>
+              <Box sx={{ height: "100px", width: "100px" }}>
                 <img src={logo} alt="" width="100%" height="100%" />
               </Box>
             </Link>
