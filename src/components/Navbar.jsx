@@ -35,6 +35,7 @@ const Navbar = () => {
           padding: "20px 30px 0px 20px",
         }}
       >
+
         <Box
           sx={{
             display: "flex",
@@ -52,6 +53,17 @@ const Navbar = () => {
               <img src={logo} alt="" width="100%" height="100%" />
             </Box>
           </Link>
+
+          <Typography
+            sx={{
+              display: { sm: "none" },
+              fontWeight: "bold",
+              color: '#ED7626',
+              fontSize: '1.5rem'
+            }}
+          >
+            NE Tours & Travels
+          </Typography>
           <Box
             sx={{
               justifyContent: "center",
