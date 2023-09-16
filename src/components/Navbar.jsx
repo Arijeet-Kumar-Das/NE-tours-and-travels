@@ -58,8 +58,9 @@ const Navbar = () => {
             sx={{
               display: { sm: "none" },
               fontWeight: "bold",
-              color: '#ED7626',
-              fontSize: '1.5rem'
+              color: '#34eb8f',
+              fontSize: '1.5rem',
+              fontFamily: 'cursive'
             }}
           >
             NE Tours & Travels
